@@ -1,0 +1,618 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import 'bootstrap/theme';
+
+
+ body {
+     color: #4D4C4C;
+     background-color: #F5F5F5;
+     font-weight: 100;
+     font-size: 16px;
+     line-height: 28px;
+     font-weight: 300;
+ }
+
+ #top-bar {
+   padding: 10px;
+ }
+
+ #top-bar a {
+   text-decoration: none;
+   color: #4D4C4C;
+ }
+
+ #container {
+     margin: 70px auto;
+     padding: 0 25px;
+ }
+
+ #header {
+     margin-bottom: 70px;
+     text-align: center;
+ }
+
+ #header #custome-logo{
+   max-width: 300px;
+   max-height: 300px;
+ }
+
+ #header #title {
+   font-size: 56px;
+   font-weight: 100;
+ }
+
+ #header #catch {
+   font-size: 20px;
+   font-weight: 100;
+   margin-top: -70px;
+ }
+
+ #header-application {
+   float: left;
+   margin: 10px;
+ }
+
+ #header-brand {
+   float: left;
+   margin: 10px;
+ }
+
+ #header-brand img{
+   width: 37px;
+   margin-top: -3px;
+ }
+
+ #header-brand #brand-name{
+   margin: 5px;
+   font-weight: 100;
+   font-size: 19px;
+ }
+
+ #header a {
+   text-decoration: none;
+   color: #4D4C4C;
+ }
+
+ #header #applicaton-id {
+   font-size: 12px;
+ }
+
+ .center-block {
+     text-align: center;
+ }
+
+ .error {
+     color: #ff5a4d;
+ }
+
+ .progress {
+     width: 500px;
+     margin: 0 auto;
+ }
+
+ .fileUpload {
+     position: relative;
+     overflow: hidden;
+     margin: 10px;
+ }
+ .fileUpload input.upload {
+     position: absolute;
+     top: 0;
+     right: 0;
+     margin: 0;
+     padding: 0;
+     font-size: 20px;
+     cursor: pointer;
+     opacity: 0;
+     filter: alpha(opacity=0);
+ }
+
+ #options {
+   width: 300px;
+ }
+
+ #passcode_form {
+   width: 300px;
+ }
+
+ .form-control {
+   margin-bottom: 10px;
+ }
+
+ #footer {
+     clear: both;
+     position: relative;
+     z-index: 10;
+     height: 3em;
+     padding-top: 100px;
+ }
+
+ #footer .icon img {
+   width: 45px;
+   margin-top: -20px;
+ }
+
+
+ #self-host {
+   font-weight: bold;
+ }
+
+ #custom-theme-form {
+   text-align: left;
+ }
+
+ #custom-theme-form input{
+   float: right;
+ }
+
+ #custom-theme-form input.color{
+   width: 80px;
+ }
+
+ #custom-theme-form .preview{
+   width: 80px;
+   border: 2px solid #e3e3e3;
+ }
+
+ /***** Applications ******/
+ #applications a, #applications a:hover{
+   text-decoration: none;
+   color: #4D4C4C;
+ }
+
+ #applications .delete {
+   display: none;
+   color: red;
+   float: right;
+   /*position: absolute;
+   margin-left: 145px;*/
+ }
+
+ #applications .application:hover .delete {
+   display: initial;
+ }
+
+ #applications .delete:hover {
+   color: #a63e34;
+ }
+
+ .application img {
+   width: 150px;
+ }
+
+ .application img:hover {
+   opacity: 0.5;
+ }
+
+ .application p {
+   text-align: center;
+   font-weight: 100;
+   font-size: 17px;
+ }
+
+ #application-form #plus {
+   color: #4D4C4C;
+   font-size: 50px;
+   padding-top: 40px;
+   margin-right: 45px;
+ }
+
+ #application-form #plus:hover {
+   color: #a5a5a5;
+ }
+
+ .ios-icon {
+   background: rgba(65, 169, 222, 0.74);
+   background-size: 100%;
+   background-repeat: no-repeat;
+   width: 150px;
+   height: 150px;
+   border-radius: 38px;
+   overflow:hidden;
+   border: solid 2px #909090;
+   position: relative;
+   -webkit-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, .2);
+   -moz-box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, .2);
+   box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, .2);
+   z-index: 10;
+ }
+ .ios-icon .gloss {
+   background: #56ABCB;
+   height: 85px;
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+   z-index: 5;
+   -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, .3);
+   -moz-box-shadow: 0px 0px 10px rgba(255, 255, 255, .3);
+   box-shadow: 0px 0px 10px rgba(255, 255, 255, .3);
+   border-top-right-radius: 170px 20px;
+   border-top-left-radius: 170px 20px;
+   border-bottom-right-radius: 40px;
+   border-bottom-left-radius: 40px;
+   position: absolute;
+   bottom: 0px;
+ }
+ .ios-icon .text {
+   font: bold 200px Tahoma;
+   text-align:center;
+   z-index: 200;
+   position: relative;
+   color: white;
+ }
+
+ #events.table {
+   text-align: left;
+   font-size: 14px;
+ }
+
+ .metrics {
+     display: table;
+     margin: 0 auto;
+     text-align:center
+ }
+
+ .metric {
+     display: inline-block;
+     padding: 0px 15px;
+ }
+
+ .metric .name {
+   font-weight: 100;
+   font-size: 20px;
+ }
+
+ .metric .value {
+   font-size: 22px;
+   font-weight: bold;
+   margin: 0;
+ }
+
+ #subscribe {
+   margin-top: 30px;
+ }
+
+ #subscribe .glyphicon{
+   color: green;
+   font-size: 40px;
+ }
+
+ .progress-label {
+   font-size: 14px;
+ }
+
+ #exp_month {
+   width: 50px;
+   /*float:left !important;*/
+ }
+ #exp_year {
+   /*margin-left: 5px;*/
+   width: 60px;
+ }
+
+ .tab-content .section-header {
+   margin-top: 10px;
+ }
+
+ .nav-tabs>li {
+   margin-bottom: -2px;
+ }
+
+ .nav.nav-tabs > li > a {
+   padding: 10px 15px;
+ }
+ .apply-changes {
+   display: inherit;
+   margin: auto;
+   background-color: #F5F5F5;
+   color: #4cae4c;
+ }
+ .tab-content {
+   margin-top: 30px;
+ }
+
+ /******** SETTINGS ********/
+ #settings .menu {
+   padding: 0;
+ }
+ #settings .menu .item {
+   background-color: white;
+   border-bottom: 1px solid rgb(226, 226, 226);
+   padding: 2px 15px;
+ }
+
+ #settings .menu .item:hover {
+   background-color: rgb(226, 226, 226);
+ }
+
+
+ #settings .menu .item a{
+   font-size: 13px;
+ }
+ .settings-section {
+   padding: 85px 0px;
+ }
+ .settings-last {
+   padding-bottom: 170px;
+ }
+
+ .btn-nav-settings {
+   background-color: #F5F5F5;
+   color: #46b8da;
+ }
+
+
+ /*---------------------------------------
+    2.2 BUTTONS
+ -----------------------------------------*/
+ .standard-button {
+   border-radius: 3px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 16px;
+   line-height: 1.6;
+   border: none;
+   padding: 18px 40px 18px 40px;
+   color: #ffffff;
+   -webkit-transition: none;
+   transition: none;
+ }
+
+ .secondary-button {
+   border-radius: 3px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 14px;
+   line-height: 1.6;
+   border: none;
+   background: transparent;
+   padding: 20px 35px 20px 35px;
+   color: #ffffff;
+   border: 1px solid rgba(255, 255, 255, 0.5);
+   border-color: rgba(255, 255, 255, 0.5);
+   -webkit-transition: none;
+   transition: none;
+ }
+
+ .secondary-button:hover {
+   background: transparent;
+   border-color: #ffffff;
+ }
+
+ .secondary-button-dark {
+   border-radius: 3px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 14px;
+   line-height: 1.6;
+   border: none;
+   background: transparent;
+   padding: 20px 35px 20px 35px;
+   color: #272727;
+   border-color: rgba(39, 39, 39, 0.5);
+   -webkit-transition: none;
+   transition: none;
+ }
+
+ .secondary-button-dark:hover {
+   background: transparent;
+   border-color: #272727;
+   color: #272727;
+ }
+
+ /*---------------------------------------
+    2.3 BORDER AND LINE
+ -----------------------------------------*/
+ .border-right {
+   border-right: 1px solid #eaeaea;
+ }
+
+ .border-left {
+   border-left: 1px solid #eaeaea;
+ }
+
+ .colored-line-left,
+ .colored-line-right,
+ .colored-line,
+ .white-line,
+ .grey-line {
+   height: 2px;
+   width: 80px;
+   display: block;
+ }
+
+ .white-line {
+   background: #ffffff;
+   margin: auto;
+ }
+
+ .grey-line {
+   background: #eaebec;
+ }
+
+ .grey-line-short {
+   height: 2px;
+   width: 40px;
+   display: block;
+   background: #eaebec;
+ }
+
+ .white-text {
+   color: #ffffff;
+ }
+
+ .white-bg-border {
+   background: #ffffff;
+   border-top: 1px solid #eaebec;
+   border-bottom: 1px solid #eaebec;
+ }
+
+ .white-bg {
+   background: #ffffff;
+ }
+
+ .colored-line-left {
+   float: left;
+ }
+
+ .colored-line-right {
+   float: right;
+ }
+
+ .colored-line {
+   margin: auto;
+ }
+
+
+ /*---------------------------------------
+    3.7 SECTION: PRICING TABLE
+ -----------------------------------------*/
+
+ ul,
+ ol {
+   padding-left: 0 !important;
+ }
+
+ li {
+   list-style: none;
+ }
+
+ .pricing {
+   padding-bottom: 30px;
+   text-align: center;
+ }
+
+ .pricing-table {
+   padding-left: 30px;
+   padding-right: 30px;
+ }
+
+ .single-pricing {
+   background: #ffffff;
+   border-radius: 3px;
+   padding-bottom: 25px;
+   border: 1px solid #e4e7e7;
+   border-bottom: 4px solid #e4e7e7;
+   margin-bottom: 80px;
+   padding: 20px;
+   -webkit-transition: all ease 0.55s;
+   transition: all ease 0.55s;
+ }
+
+ .package-title h3 {
+   line-height: 60px;
+   margin-top: 0;
+   margin-bottom: 0;
+   border-radius: 3px;
+ }
+
+ .price {
+   margin-top: 0;
+   margin-bottom: 0;
+   padding-top: 5px;
+   border-bottom: 1px solid #ececec;
+   padding-bottom: 25px;
+   padding-top: 15px;
+ }
+
+ .price .superscript {
+   vertical-align: super;
+   font-size: 25px;
+ }
+
+ .price .month {
+   font-size: inherit;
+   display: block;
+   margin-top: 0;
+   line-height: 1;
+   font-size: 14px !important;
+   font-weight: 300;
+ }
+
+ .package-list {
+   padding-top: 10px;
+   margin-bottom: 25px;
+ }
+
+ .package-list li {
+   margin-top: 12px;
+   margin-bottom: 12px;
+   border-bottom: 1px dotted #eaeaea;
+   padding-bottom: 10px;
+ }
+
+ .package-list li span {
+   margin-right: 8px;
+ }
+
+ .single-pricing .button {
+   margin-bottom: 20px;
+ }
+
+ .highlighted {
+   margin-top: -24px;
+ }
+
+ .highlighted .package-title h3 {
+   line-height: 84px;
+ }
+
+ #app-notes {
+   text-align: left;
+ }
+
+ #app-notes table {
+   padding: 0; }
+   #app-notes table tr {
+     border-top: 1px solid #cccccc;
+     margin: 0;
+     padding: 0; }
+     #app-notes table tr:nth-child(2n) {
+       background-color: #f8f8f8; }
+       #app-notes table tr th {
+         font-weight: bold;
+         border: 1px solid #cccccc;
+         text-align: left;
+         margin: 0;
+         padding: 6px 13px; }
+         #app-notes table tr td {
+           border: 1px solid #cccccc;
+           text-align: left;
+           margin: 0;
+           padding: 6px 13px; }
+           #app-notes table tr th :first-child, #app-notes table tr td :first-child {
+             margin-top: 0; }
+             #app-notes table tr th :last-child, #app-notes table tr td :last-child {
+               margin-bottom: 0; }
+ #app-notes li {
+   list-style: inherit;
+ }
+
+ .plan-nav {
+   margin-bottom: 15px;
+ }
+
+ .step {
+   margin: 50px;
+ }
+
+ #login .row {
+   margin-top: 5px;
+   font-size: 22px;
+ }

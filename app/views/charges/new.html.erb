@@ -1,19 +1,47 @@
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
-  </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"
-          data-locale="auto">
-  </script>
-<% end %>
+
+<div class="container pricing" id="section6">
+  <!-- PRICING TABLE -->
+  <div class="row pricing-table">
+
+    <!-- PROTOTYPER PACKAGE -->
+    <div id="subscriptions" class="col-md-4 wow fadeInLeft" data-wow-offset="20" data-wow-duration="1.75s">
+      <div class="single-pricing border-bottom-hover">
+
+        <div class="package-title color-bg">
+          <h3 class="white-text">Free</h3>
+        </div>
+
+        <h2 class="price"><span class="superscript">$</span>0<span class="month small-text">Per Month</span></h2>
+
+        <ul class="package-list">
+          <li><span class="dark-text strong">3</span>Uploads Max/Mo</li>
+          <li><span class="dark-text strong">1 Week</span>Build Availability</li>
+          <li><span class="dark-text strong">5MB</span>Build Size Limit</li>
+        </ul>
+
+        <div class="button">
+          <%= form_tag charges_path do %>
+            <article>
+              <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+              <% end %>
+              <label class="amount">
+                <span>Amount: $5.00</span>
+              </label>
+            </article>
+
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="A month's subscription"
+                    data-amount="500"
+                    data-locale="auto">
+            </script>
+          <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
