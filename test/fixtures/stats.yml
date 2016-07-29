@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rails: MyString
+  g: MyString
+  scaffold: MyString
+  ProductType: MyString
+  name: MyString
+
+two:
+  rails: MyString
+  g: MyString
+  scaffold: MyString
+  ProductType: MyString
+  name: MyString
