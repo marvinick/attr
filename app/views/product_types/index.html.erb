@@ -24,4 +24,7 @@
 
 <br>
 
-<%= link_to 'New Product Type', new_product_type_path %>
+<%= form_tag new_product_path, method: :get do %>
+  <%= select_tag :product_type_id, options_from_collection_for_select(ProductType.all, :id, :name) %>
+  <%= submit_tag "New Product", name: nil %>
+<% end %>

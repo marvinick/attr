@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
-  validates_presence_of :name, :content
-  
+  # attr_accessible :name, :price, :product_type_id, :properties
+  belongs_to :product_type
+  serialize :properties, Hash
 end
