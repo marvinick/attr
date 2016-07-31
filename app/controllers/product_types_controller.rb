@@ -1,55 +1,28 @@
 class ProductTypesController < ApplicationController
-  # GET /product_types
-  # GET /product_types.json
+
   def index
     @product_types = ProductType.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @product_types }
-    end
   end
 
-  # GET /product_types/1
-  # GET /product_types/1.json
   def show
     @product_type = ProductType.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @product_type }
-    end
   end
 
-  # GET /product_types/new
-  # GET /product_types/new.json
+
   def new
     @product_type = ProductType.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @product_type }
-    end
   end
 
-  # GET /product_types/1/edit
   def edit
     @product_type = ProductType.find(params[:id])
   end
 
-  # POST /product_types
-  # POST /product_types.json
   def create
     @product_type = ProductType.new(product_type_params)
-
-    respond_to do |format|
-      if @product_type.save
-        format.html { redirect_to @product_type, notice: 'Product type was successfully created.' }
-        format.json { render json: @product_type, status: :created, location: @product_type }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @product_type.errors, status: :unprocessable_entity }
-      end
+    if @product_type.save
+      redirect_to @product_type, notice:"Good job"
+    else
+      render "new"
     end
   end
 
@@ -59,7 +32,7 @@ class ProductTypesController < ApplicationController
     @product_type = ProductType.find(params[:id])
 
     respond_to do |format|
-      if @product_type.update_attributes(product_type_params)
+      if @product_type.update(product_type_params)
         format.html { redirect_to @product_type, notice: 'Product type was successfully updated.' }
         format.json { head :no_content }
       else
@@ -69,8 +42,6 @@ class ProductTypesController < ApplicationController
     end
   end
 
-  # DELETE /product_types/1
-  # DELETE /product_types/1.json
   def destroy
     @product_type = ProductType.find(params[:id])
     @product_type.destroy
@@ -81,8 +52,9 @@ class ProductTypesController < ApplicationController
     end
   end
 
+  private
+
   def product_type_params
-	params.require(:product_type).permit(
-			:name, fields_attributes: [ :field_type, :name, :required ] )
+	  params.require(:product_type).permit(:name, fields_attributes: [ :field_type, :name, :required ] )
   end
 end

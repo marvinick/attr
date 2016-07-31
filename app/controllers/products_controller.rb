@@ -8,8 +8,7 @@ class ProductsController < ApplicationController
   end
 
   def new
-    product_type = ProductType.find(params[:product_type_id])
-    @product = Product.new(product_type: product_type)
+    product_pass
   end
 
   def edit
