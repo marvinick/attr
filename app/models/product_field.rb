@@ -1,3 +1,3 @@
-class ProductField < ApplicationRecord
-  belongs_to :product_type
+class ProductField < ActiveRecord::Base
+ belongs_to :product_type
 end
