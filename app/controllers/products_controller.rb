@@ -42,6 +42,11 @@ class ProductsController < ApplicationController
 
   private
 
+  def product_pass
+    product_type = ProductType.find(params[:product_type_id])
+    @product = Product.new(product_type: product_type)
+  end
+
   def product_params
     params.require(:product).permit(:name, :price, :product_type_id, :properties)
   end
