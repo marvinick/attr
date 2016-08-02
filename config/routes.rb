@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ships
   resources :starships
   resources :product_types
   root to: 'pages#index'

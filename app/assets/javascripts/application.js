@@ -16,5 +16,5 @@
 //= require react
 //= require react_ujs
 //= require components
-//= require cocoon
+//= require cocoon  
 //= require_tree .

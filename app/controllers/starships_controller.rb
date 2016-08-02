@@ -15,7 +15,7 @@ class StarshipsController < ApplicationController
   # GET /starships/new
   def new
     @starship = Starship.new
-    3.times { @starship.crew_members.build}
+    3.times { @starship.crew_members.build }
   end
 
   # GET /starships/1/edit
