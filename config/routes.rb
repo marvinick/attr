@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :charges
   resources :products
   resources :crew_members, only: [:new, :create]
+  get 'graph/index'
+  get 'graph/data', :defaults => { :format => 'json' }
 end
