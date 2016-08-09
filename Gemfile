@@ -15,6 +15,7 @@ gem 'omniauth-twitter'
 gem 'stripe'
 gem 'cocoon'
 gem "d3-rails"
+gem "simple_form"
 
 group :development, :test do
   gem 'byebug', platform: :mri
