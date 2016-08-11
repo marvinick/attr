@@ -17,15 +17,15 @@
         <div id="navbar">
           <% if current_user %>
             <ul class="nav navbar-nav pull-right">
+              <li><%= link_to 'Products', products_path %></li>
+              <li><%= link_to 'Product Types', product_types_path %></li>
+              <li><%= link_to 'Starships', starships_path %></li>
               <li><%= image_tag current_user.image_url, alt: current_user.name %></li>
               <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
             </ul>
           <% else %>
             <ul class="nav navbar-nav">
               <li><%= link_to 'Twitter', '/auth/twitter' %></li>
-              <li><%= link_to 'Products', products_path %></li>
-              <li><%= link_to 'Product Types', product_types_path %></li>
-              <li><%= link_to 'Starships', starships_path %></li>
             </ul>
           <% end %>
         </div>
