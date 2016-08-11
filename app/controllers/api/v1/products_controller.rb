@@ -22,3 +22,4 @@ class Api::V1::ProductsController < Api::V1::BaseController
   def item_params
     params.require(:product).permit(:id, :name, :content)
   end
+end
