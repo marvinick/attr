@@ -19,7 +19,7 @@ class Api::V1::ProductsController < Api::V1::BaseController
 
   private
 
-  def item_params
+  def product_params
     params.require(:product).permit(:id, :name, :content)
   end
 end
