@@ -12,11 +12,29 @@ var Body = React.createClass({
     this.setState({ products: newState })
   },
 
+  handleDelete(id) {
+    $.ajax({
+      url: '/api/v1/products/${id}',
+      type: "DELETE",
+      success:() => {
+        this.removeProductClient(id);
+      }
+    });
+  },
+
+  removeProductClient(id) {
+    var newProducts = this.state.products.filter((product) => {
+      return product.id != id;
+    });
+
+    this.setState({ products: newProducts });
+  },
+
   render() {
     return (
       <div>
         <NewProduct handleSubmit={this.handleSubmit} />
-        <AllProducts products={this.state.products} />
+        <AllProducts products={this.state.products} handleDelete={this.handleDelete} />
       </div>
     )
   }
