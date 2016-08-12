@@ -13,6 +13,7 @@ var AllProducts = React.createClass({
         <div key={product.id}>
           <h3>{product.name}</h3>
           <p>{product.content}</p>
+        </div>
       )
     });
 
