@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160731181400) do
+ActiveRecord::Schema.define(version: 20160815061013) do
 
   create_table "crew_members", force: :cascade do |t|
     t.string   "name"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 20160731181400) do
     t.integer  "starship_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.boolean  "manager"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "members", force: :cascade do |t|
