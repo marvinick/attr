@@ -3,11 +3,7 @@ var Employees = React.createClass({
   render: function() {
     employees = this.props.employees.map( function(employee) {
       return (
-        <tr key={employee.id}>
-          <td>{employee.name}</td>
-          <td>{employee.email}</td>
-          <td>{employee.manager ? '&#10004;' : ''}</td>
-        </tr>
+        <Employee employee={employee} key={employee.id} />
       );
     });
     return (
