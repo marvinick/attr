@@ -8,8 +8,10 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/auth/:provider/callback', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  devise_for :users, :controllers => { :sessions => "sessions", :registrations => "registrations" }
+
+  # get '/auth/:provider/callback', to: 'sessions#create'
+  # delete '/logout', to: 'sessions#destroy'
   resources :charges
   get 'graph/index'
   get 'graph/data', :defaults => { :format => 'json' }

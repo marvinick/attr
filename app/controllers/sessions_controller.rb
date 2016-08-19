@@ -1,20 +1,20 @@
-class SessionsController < ApplicationController
+class SessionsController < Devise::SessionsController
+
   def create
-    begin
-      @user = User.from_omniauth(request.env['omniauth.auth'])
-      session[:user_id] = @user.id
-      flash[:success] = "Welcome, #{@user.name}!"
-    rescue
-      flash[:warning] = "There was an error while trying to authenticate you..."
-    end
-    redirect_to root_path
+    user = warden.authenticate!(auth_options)
+    token = Tiddle.create_and_return_token(user, request)
+    render json: { authentication_token: token }
   end
 
   def destroy
-    if current_user
-      session.delete(:user_id)
-      flash[:success] = 'See you!'
-    end
-    redirect_to root_path
+    Tiddle.expire_token(current_user, request) if current_user
+    respond_with sign_out
   end
-end
+
+  private
+
+    # this is invoked before destroy and we have to override it
+    def verify_signed_out_user
+    end
+
+end 

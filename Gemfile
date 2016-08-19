@@ -18,6 +18,7 @@ gem "d3-rails"
 gem "simple_form"
 gem 'responders'
 gem 'devise'
+gem 'tiddle'
 
 group :development, :test do
   gem 'byebug', platform: :mri
