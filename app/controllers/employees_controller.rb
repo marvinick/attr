@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
   def index
     @employees = Employee.all
-    render component: 'Empoyees', props: { employees: @employees }
+    render component: 'Employees', props: { employees: @employees }
   end
 
   def create
@@ -17,9 +17,22 @@ class EmployeesController < ApplicationController
     end
   end
 
+  def update
+    @employee = Employee.find(params[:id])
+    respond_to do |format|
+      format.json do
+        if @employee.update(employee_params)
+          render :json => @employee
+        else
+          render :json => { :errors => @employee.errors.messages }, :status => 422
+        end
+      end
+    end
+  end 
+
   private
 
   def  employee_params
     params.require(:employee).permit(:name, :email, :manager)
-  end 
+  end
 end

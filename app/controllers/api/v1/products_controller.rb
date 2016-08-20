@@ -8,7 +8,7 @@ class Api::V1::ProductsController < Api::V1::BaseController
   end
 
   def destroy
-    respond_with Product.destroy(params["id"])
+    respond_with Product.destroy(params[:id])
   end
 
   def update

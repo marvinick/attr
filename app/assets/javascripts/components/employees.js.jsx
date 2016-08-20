@@ -25,7 +25,7 @@ var Employees = React.createClass({
 
   handleManagerChange(e) {
     var newEmployee = this.state.employee;
-    newEmployee.manager  e.target.value;
+    newEmployee.manager = e.target.value;
     this.setState({employee: newEmployee});
   },
 
@@ -34,7 +34,7 @@ var Employees = React.createClass({
     $.ajax({
       method: 'POST',
       data: {
-        employee.that.state.employee,
+        employee: that.state.employee,
       },
       url: '/employees.json',
       success: function(res) {
@@ -51,7 +51,7 @@ var Employees = React.createClass({
         });
       },
       error: function(res) {
-        that.setState){errors: res.responseJSON.errors})
+        that.setState({errors: res.responseJSON.errors})
       }
     });
   },
