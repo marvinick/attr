@@ -72,7 +72,7 @@ var Employees = React.createClass({
     });
     return (
       <div>
-        <h1>Employees</h1>
+        <h1>Products</h1>
         <div id="employees">
           <table>
             <thead>
