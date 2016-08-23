@@ -17,6 +17,12 @@ var Employee = React.createClass({
     this.setState({employee: newEmployee});
   },
 
+  handleContentChange(e) {
+    var newEmployee = this.state.employee;
+    newEmployee.content = e.target.value;
+    this.setState({employee: newEmployee});
+  },
+
   handleEmailChange(e) {
     var newEmployee = this.state.employee;
     newEmployee.email = e.target.value;
@@ -78,6 +84,13 @@ var Employee = React.createClass({
                 value={this.state.employee.name}
                 onChange={this.handleNameChange} />
               <span style={{color: 'red'}}>{this.state.errors.name}</span>
+            </td>
+            <td>
+              <input
+                type="text"
+                value={this.state.employee.note}
+                onChange={this.handleNoteChange} />
+              <span style={{color: 'red'}}>{this.state.errors.note}</span>
             </td>
             <td>
               <input
