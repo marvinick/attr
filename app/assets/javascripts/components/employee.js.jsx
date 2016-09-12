@@ -17,9 +17,9 @@ var Employee = React.createClass({
     this.setState({employee: newEmployee});
   },
 
-  handleContentChange(e) {
+  handleNoteChange(e) {
     var newEmployee = this.state.employee;
-    newEmployee.content = e.target.value;
+    newEmployee.note = e.target.value;
     this.setState({employee: newEmployee});
   },
 
