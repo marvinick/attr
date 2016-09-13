@@ -79,7 +79,7 @@ var Employees = React.createClass({
               <tr>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Manager</th>
+                <th>Decision Maker</th>
               </tr>
             </thead>
             <tbody>

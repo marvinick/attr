@@ -19,6 +19,7 @@ gem "simple_form"
 gem 'responders'
 gem 'devise'
 gem 'tiddle'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 group :development, :test do
   gem 'byebug', platform: :mri
